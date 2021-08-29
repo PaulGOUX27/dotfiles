@@ -17,6 +17,7 @@ To do when installing dotfiles on a new computer
 git clone --separate-git-dir=$HOME/dotfiles git@github.com:PaulGOUX27/dotfiles.git dotfiles-tmp
 rsync --recursive --verbose --exclude '.git' dotfiles-tmp/ $HOME/
 rm -r dotfiles-tmp
+alias dg='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 dg config status.showUntrackedFiles no
 dg remote set-url origin git@github.com:PaulGOUX27/dotfiles.git
 ```
